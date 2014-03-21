@@ -24,5 +24,19 @@
     <string name="menu_edit_friends_label">Edit friends</string>
     <string name="menu_logout_label">Logout</string>
     <string name="title_activity_edit_friends_acitvity">Edit Friends</string>
-
+    <string name="menu_camera_label">Camera</string>
+    <string-array name="camera_choices">
+        <item >Take Picture</item>
+        <item >Take Video</item>
+        <item >Choose Picture</item>
+        <item >Choose Video</item>
+        
+        
+    </string-array>
+        <string name="external_storage_not_found">There was a problem accessing your device\'s external storage.</string>
+		<string name="error_generic">Sorry there was an error.</string>
+		<string name="error_opening_file">There was an error opening file.</string>
+		<string name="error_file_too_large">The selected file was over 10 MB.</string>
+		<string name="warning_video_size_limit">The selected video must be less than 10 MB.</string>
+        
 </resources>
