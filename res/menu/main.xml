@@ -1,4 +1,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
-    <item android:id="@+id/logout" android:title="@string/menu_logout_label"></item>
-
+    
+	<item android:id="@+id/logout" android:title="@string/menu_logout_label"></item>
+	
+	<item android:id="@+id/editFriends" android:title="@string/menu_edit_friends_label"></item>
+	
+	
 </menu>

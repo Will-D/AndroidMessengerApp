@@ -7,14 +7,16 @@
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
-	<uses-permission android:name="android.permission.INTERNET" />
-	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+        android:name="com.wdahl.ribit.RibitApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
-        android:name="RibitApplication" >
+        android:theme="@style/AppTheme" >
         <activity
             android:name="com.wdahl.ribit.MainActivity"
             android:label="@string/app_name"
@@ -35,6 +37,14 @@
             android:label="@string/title_activity_sign_up"
             android:parentActivityName="com.wdahl.ribit.LoginActivity"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.wdahl.ribit.EditFriendsActivity"
+            android:label="@string/title_activity_edit_friends_acitvity"
+            android:parentActivityName="com.wdahl.ribit.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wdahl.ribit.MainActivity" />
         </activity>
     </application>
 
