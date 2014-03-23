@@ -47,6 +47,7 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	
 	protected Uri mMediaUri;
 	
+	
 	protected DialogInterface.OnClickListener mDialogListener = new OnClickListener() {
 		
 		@Override
@@ -230,7 +231,9 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
                             .setTabListener(this));
         }
     }
-
+    
+    
+    
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     	super.onActivityResult(requestCode, resultCode, data);
@@ -278,6 +281,21 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	    		sendBroadcast(mediaScanIntent);
     		}
     		
+    		Intent recipientsIntent = new Intent(this, RecipientsActivity.class);
+    		recipientsIntent.setData(mMediaUri);
+    		
+    		
+    		String fileType;
+    		if ( requestCode == TAKE_PHOTO_REQUEST || requestCode == CHOOSE_PHOTO_REQUEST ){
+    			fileType = ParseConstants.TYPE_IMAGE;
+    		} else if (requestCode == TAKE_VIDEO_REQUEST || requestCode == CHOOSE_VIDEO_REQUEST){
+    			fileType = ParseConstants.TYPE_VIDEO;
+    		} else {
+    			fileType = ParseConstants.TYPE_TEXT;
+    		}
+    		recipientsIntent.putExtra(ParseConstants.KEY_FILE_TYPE, fileType);
+    		startActivity(recipientsIntent);
+    		
     	} else if (resultCode != RESULT_CANCELED) {
     		Toast.makeText(MainActivity.this, 
 					R.string.error_generic, 
@@ -308,15 +326,17 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     		case R.id.action_logout:
     			ParseUser.logOut();
         		navigateToLogin();
- 
+        		break;
     		case R.id.action_edit_friends:
         		Intent intent = new Intent(this, EditFriendsActivity.class);
         		startActivity(intent);
+        		break;
     		case R.id.action_camera:
     			AlertDialog.Builder builder = new AlertDialog.Builder(this);
     			builder.setItems(R.array.camera_choices, mDialogListener);
     			AlertDialog dialog = builder.create();
     			dialog.show();
+    			break;
     	}
     	
     	return true;		

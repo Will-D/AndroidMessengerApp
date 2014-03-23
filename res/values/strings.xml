@@ -20,23 +20,30 @@
     <string name="login_error_title">Oops</string>
     <string name="inbox_empty_label">You have no new messages.</string>
     <string name="friends_empty_label">Add friends to begin!</string>
+    <string name="friends_empty_sending_label">Choose some friends first!</string>
     <string name="users_empty_label">No users could be retrieved.</string>
     <string name="menu_edit_friends_label">Edit friends</string>
     <string name="menu_logout_label">Logout</string>
     <string name="title_activity_edit_friends_acitvity">Edit Friends</string>
     <string name="menu_camera_label">Camera</string>
+    <string name="menu_send_label">Send</string>
+
     <string-array name="camera_choices">
-        <item >Take Picture</item>
-        <item >Take Video</item>
-        <item >Choose Picture</item>
-        <item >Choose Video</item>
-        
-        
+        <item>Take Picture</item>
+        <item>Take Video</item>
+        <item>Choose Picture</item>
+        <item>Choose Video</item>
     </string-array>
-        <string name="external_storage_not_found">There was a problem accessing your device\'s external storage.</string>
-		<string name="error_generic">Sorry there was an error.</string>
-		<string name="error_opening_file">There was an error opening file.</string>
-		<string name="error_file_too_large">The selected file was over 10 MB.</string>
-		<string name="warning_video_size_limit">The selected video must be less than 10 MB.</string>
-        
+
+    <string name="external_storage_not_found">There was a problem accessing your device\'s external storage.</string>
+    <string name="error_generic">Sorry there was an error.</string>
+    <string name="error_opening_file">There was an error opening file.</string>
+    <string name="error_file_too_large">The selected file was over 10 MB.</string>
+    <string name="warning_video_size_limit">The selected video must be less than 10 MB.</string>
+    <string name="title_activity_recipients">Choose Recipients</string>
+    <string name="error_file_selected">There was an error with the file selected. Please select a different file.</string>
+    <string name="success_message">Message Sent!</string>
+    <string name="error_sending_message">There was an error sending your message, please try again.</string>
+    <string name="title_activity_view_image">Ribbit</string>
+
 </resources>
